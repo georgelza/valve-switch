@@ -1,0 +1,5 @@
+#scp * pi@172.16.20.237:/home/pi/valveswitch/
+
+#scp * pi@192.168.0.65:/home/pi/valveswitch/
+
+scp * pi@192.168.0.52:/home/pi/valveswitch/

@@ -1,0 +1,18 @@
+[Unit]
+Description=My Valve Switching Service (Garden)
+After=multi-user.target
+
+[Service]
+Type=idle
+;Restart=always
+;StartLimitBurst=5
+;StartLimitIntervalSec=15
+;RestartSec=2
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/valveswitch/
+ExecStart=/home/pi/valveswitch/run_garden.bsh >> 2>&1 >> /home/pi/valveswitch/garden.log
+
+
+[Install]
+WantedBy=multi-user.target

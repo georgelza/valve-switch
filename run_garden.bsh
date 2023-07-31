@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export CONFIGFILE=garden.cfg
+
+#python3 /home/pi/valveswitch/vswitch.py
+
+python3 vswitch.py
