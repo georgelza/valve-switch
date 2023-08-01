@@ -205,11 +205,18 @@ def on_log(client, userdata, level, buf):
 
 
 def relay_on(pin):
-    GPIO.output(pin, GPIO.HIGH)
-
-def relay_off(pin):
     GPIO.output(pin, GPIO.LOW)
-
+    my_logger.debug("{time}, Switched to {gpiostate}".format(
+        time=str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")),
+        gpiostate=GPIO.LOW,
+        ))
+    
+def relay_off(pin):
+    GPIO.output(pin, GPIO.HIGH)
+    my_logger.debug("{time}, Switched to {gpiostate}".format(
+        time=str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")),
+        gpiostate=GPIO.HIGH,
+        ))
 
 def s_toggle(gpio, state):
 
